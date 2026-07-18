@@ -1,6 +1,6 @@
 # Data, AI & Engineering Portfolio
 
-This repository contains portfolio projects focused on data analytics, automation, AI-assisted workflows, and trading-system performance analysis.
+This repository contains portfolio projects focused on data analytics, Python automation, AI-assisted workflows, and trading-system performance analysis.
 
 The goal of this portfolio is to show practical skills in turning raw data into useful insights, reports, and decision-support tools.
 
@@ -12,23 +12,34 @@ This portfolio connects three areas:
 * Python automation
 * AI-assisted system workflows
 
-## Planned Projects
+## Projects
 
-### 1. Trade Log Analyzer
+| Project                                           | Description                                                                         |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Trade Log Analyzer](projects/trade-log-analyzer) | Python tool that analyzes trading-system CSV logs and generates performance metrics |
 
-A Python project that reads trade-log data and generates useful performance metrics.
+## Featured Project: Trade Log Analyzer
 
-Planned features:
+The Trade Log Analyzer is a Python project that reads sample trading data and calculates key performance metrics.
+
+It calculates:
 
 * Total trades
+* Winning trades
+* Losing trades
 * Win rate
-* Net PnL
-* Average winner vs average loser
+* Total net PnL
+* Average win
+* Average loss
+* Best trade
+* Worst trade
 * Exit reason breakdown
-* Monthly performance
-* Drawdown review
 
-### 2. Backtest Report Generator
+This project shows how raw trade data can be cleaned, processed, and turned into useful performance insights.
+
+## Planned Future Projects
+
+### Backtest Report Generator
 
 A reporting tool that converts backtest results into a clean performance summary.
 
@@ -41,7 +52,7 @@ Planned outputs:
 * Equity curve chart
 * Drawdown chart
 
-### 3. AI Trade Journal Summarizer
+### AI Trade Journal Summarizer
 
 An AI-assisted workflow for turning trade logs into readable trade reviews.
 
@@ -53,7 +64,7 @@ Planned features:
 * Generate weekly trading review notes
 * Create improvement suggestions
 
-### 4. Data Cleaning Examples
+### Data Cleaning Examples
 
 Small projects showing how raw CSV data can be cleaned and prepared for analysis.
 
