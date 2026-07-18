@@ -1,72 +1,76 @@
 # Trade Log Analyzer
 
-This project is a Python-based data analysis tool for reviewing trading-system results from CSV trade logs.
+A simple Python project that analyzes trading-system results from a CSV trade log.
 
-The goal is to turn raw trade data into useful performance insights.
+This project demonstrates how raw trade data can be converted into useful performance metrics.
 
-## Project Purpose
+## Files
 
-Trading systems produce a lot of raw trade data.
+| File                | Purpose                                          |
+| ------------------- | ------------------------------------------------ |
+| `analyze_trades.py` | Python script that reads and analyzes trade data |
+| `sample_trades.csv` | Synthetic sample trade log used for testing      |
 
-A trade log analyzer helps convert that raw data into clear metrics such as win rate, net profit and loss, average winner, average loser, and exit reason breakdown.
+## What It Calculates
 
-## What This Project Shows
-
-This project demonstrates practical data analytics skills using trading data.
-
-It focuses on:
-
-* Reading CSV files
-* Cleaning trade data
-* Calculating performance metrics
-* Grouping trades by result and exit reason
-* Summarizing trading performance
-* Preparing data for reporting
-
-## Planned Metrics
-
-The analyzer will calculate:
+The analyzer calculates:
 
 * Total trades
 * Winning trades
 * Losing trades
 * Win rate
-* Net PnL
+* Total net PnL
 * Average win
 * Average loss
 * Best trade
 * Worst trade
 * Exit reason breakdown
 
-## Sample Input
+## How to Run
 
-The tool uses a sanitized sample trade log with columns such as:
+Download or clone this repository, open this project folder, and run:
 
-* trade_id
-* market
-* side
-* entry_time
-* exit_time
-* entry_price
-* exit_price
-* trade_duration_min
-* exit_reason
-* roe_peak_pct
-* roe_exit_pct
-* net_pnl_usdt
-* result
+```bash
+python analyze_trades.py
+```
 
-## Why This Matters
+The script expects `sample_trades.csv` to be in the same folder.
 
-This project connects trading-system development with data analytics.
+## Example Output
 
-Instead of only showing trading results, it shows how raw trade data can be processed, reviewed, and turned into better decisions.
+```text
+TRADE LOG ANALYZER REPORT
+========================================
+Total Trades:       8
+Winning Trades:     5
+Losing Trades:      3
+Win Rate:           62.50%
+Total Net PnL:      $37.20
+Average Win:        $11.91
+Average Loss:       $-7.45
+Best Trade:         sample_003 ($18.40)
+Worst Trade:        sample_002 ($-8.20)
+
+EXIT REASON BREAKDOWN
+========================================
+TRAILING_STOP: 1 trades | Net PnL: $12.50
+STOP_LOSS: 3 trades | Net PnL: $-22.35
+TAKE_PROFIT: 2 trades | Net PnL: $33.00
+ROE_LADDER: 1 trades | Net PnL: $9.75
+TIME_STOP: 1 trades | Net PnL: $4.30
+```
+
+## Why This Project Matters
+
+Trading systems generate raw logs, but raw logs are not enough.
+
+A good analytics workflow should turn trade records into clear metrics that can be reviewed, compared, and improved over time.
 
 ## Skills Demonstrated
 
 * Python
-* CSV analysis
+* CSV processing
 * Data cleaning
-* Metric calculation
-* Performance reporting
+* Performance metrics
 * Trading analytics
+* Report generation
